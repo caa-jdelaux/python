@@ -150,22 +150,6 @@ V = (1/3) * B * h
 print(f"Le volume du cône est : {format(V, '0.2f')}")
 
 #--------------------------------------------------------------------------------
-print("\n# Gestion des conditions")
-random_boolean = bool(random.getrandbits(1))
-print("Random Boolean:", random_boolean)
-etat = "solide" if random_boolean else "liquide"
-print("Etat:", etat)
-
-print("\n# Boucle for")
-for i in range(1, 6):
-    print("Boucle for",i)
-
-print("\n# Boucle while")
-count = 1
-while count <= 5:
-    print("Boucle while",count)
-    count += 1
-#--------------------------------------------------------------------------------
 print("\n# Exo 3")
 # Saisie de l'âge
 # age = float(input("Entrez votre âge : "))
@@ -211,17 +195,35 @@ else:
     sEtat ="GAZEUX"
 print("T:", temperature, "Etat:", sEtat)
 
+
+#--------------------------------------------------------------------------------
+print("\n# Gestion des conditions")
+random_boolean = bool(random.getrandbits(1))
+print("Random Boolean:", random_boolean)
+etat = "solide" if random_boolean else "liquide"
+print("Etat:", etat)
+
+print("\n# Boucle for")
+for i in range(1, 6):
+    print("Boucle for:",i)
+
+print("\n# Boucle while")
+count = 1
+while count <= 5:
+    print("Boucle while:",count)
+    count += 1
+    
 #--------------------------------------------------------------------------------
 print("\n# Gestion des listes")
 liste_vide = []
-ma_liste = [2, 1, 3]
+ma_liste = ["B", "A", "C"]
 print("Liste vide:", liste_vide)
 print("Ma liste:", ma_liste)
 ma_liste.sort()
 print("Ma liste:", ma_liste)
 ma_liste.append(4)
 print("Ma liste:", ma_liste)
-ma_liste.remove(3)
+ma_liste.remove(4)
 print("Ma liste:", ma_liste)
 ma_liste.extend([5, 6, 7])
 print("Ma liste:", ma_liste)
@@ -233,3 +235,51 @@ print("Ma liste:", ma_liste)
 while ma_liste:
     print(ma_liste.pop())
     
+#--------------------------------------------------------------------------------
+print("\n# le tuple")
+mon_tuple = (1, 2, 3)
+print("Mon tuple:", mon_tuple)
+print("Mon tuple:", mon_tuple[0])
+mon_tuple = mon_tuple + (4, 5, 6)
+print("Mon tuple:", mon_tuple)
+var1, var2, var3, var4, var5, var6 = mon_tuple
+print("var1:", var1)
+for i in mon_tuple:
+    print(i)
+    
+#--------------------------------------------------------------------------------
+print("\n# Exo 5")
+# Exo 5
+# Affichage de la table de multiplication de 1 à 10
+nbPadding = 5
+n = 100 #random.randint(1, 10)
+print("n:", n)
+
+#Entete de la table
+for y in range(1, 11):
+    print(f"{1*y:{nbPadding}}", end="")
+
+#Ligne de séparation
+print()
+print("-" * (nbPadding * 10), end="")
+print()
+
+#Calcul de la table
+for x in range(1, n+1):
+    for y in range(1, 11):
+        print(f"{x*y:{nbPadding}}", end="")
+    print()
+
+#--------------------------------------------------------------------------------
+print("\n# Exo 6")
+# Exo 6
+epaisseurPaper = 0.1
+epaisseurCible = 400 * 1000  # Conversion de mètres en millimètres
+nbPliage = 0
+# calcul du nombre de pliage pour atteindre 400 m
+while epaisseurPaper < epaisseurCible:
+    epaisseurPaper = epaisseurPaper * 2
+    nbPliage += 1
+#nbPliage = math.ceil(math.log(epaisseurCible / epaisseurPaper, 2))
+print("Nombre de pliages nécessaires:", nbPliage)
+
