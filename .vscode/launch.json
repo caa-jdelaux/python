@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Execute jde_001.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/jde_001.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}
