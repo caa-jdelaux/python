@@ -326,7 +326,7 @@ epaisseurCible = 400 * 1000  # Conversion de mètres en millimètres
 nbPliage = 0
 # calcul du nombre de pliage pour atteindre 400 m
 while epaisseurPaper < epaisseurCible:
-    epaisseurPaper = epaisseurPaper * 2
+    epaisseurPaper *=  2
     nbPliage += 1
 #nbPliage = math.ceil(math.log(epaisseurCible / epaisseurPaper, 2))
 print("Nombre de pliages nécessaires:", nbPliage)
