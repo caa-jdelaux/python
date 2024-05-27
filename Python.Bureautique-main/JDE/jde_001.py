@@ -154,7 +154,7 @@ print(f"Le volume du cône est : {format(V, '0.2f')}")
 print("\n# Exo 3")
 # Saisie de l'âge
 # age = float(input("Entrez votre âge : "))
-age= random.randint(1,36)
+age= random.randint(1,40)
 # Contrôle de l'âge
 if age >= 18:
     bMajeure = True
@@ -164,3 +164,26 @@ else:
     print(f"{age}:Vous êtes mineur.")
 
 print(f"Vous êtes majeur ? {bMajeure}")
+
+#--------------------------------------------------------------------------------
+print("\n# Exo 3 bis")
+# Saisie de l'âge
+# age = float(input("Entrez votre âge : "))
+age = random.randint(1, 40)
+# Contrôle de l'âge
+match age:
+    case _ if age >= 18:
+        bMajeure = True
+        print(f"{age}: Vous êtes majeur.")
+    case _:
+        bMajeure = False
+        print(f"{age}: Vous êtes mineur.")
+
+print(f"Vous êtes majeur ? {bMajeure}")
+
+#--------------------------------------------------------------------------------
+print("\n# Gestion des conditions")
+random_boolean = bool(random.getrandbits(1))
+print("Random Boolean:", random_boolean)
+etat = "solide" if random_boolean else "liquide"
+print("Etat:", etat)
