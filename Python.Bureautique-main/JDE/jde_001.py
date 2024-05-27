@@ -98,6 +98,7 @@ print(f"Valeur de PI: {pi:0>5.2f} (avec un affiche de 5 carac + un zéro avant l
 
 print("\n# affiche le raccourci CRTL+K et CTRL+C pour commenter le code sélectionné")
 
+#--------------------------------------------------------------------------------
 print("\n# Exo 1")
 # nom = input("Entrez votre nom: ")
 # prenom = input("Entrez votre prénom: ")
@@ -133,6 +134,7 @@ sum = num1 + num2
 # Affichage de la somme
 print("La somme de", num1, "et", num2, "est égale à", format(sum, '0>6.2f'))
 
+#--------------------------------------------------------------------------------
 print("\n# Exo 2")
 # Saisie du rayon et de la hauteur
 # r = float(input("Entrez le rayon du cône : "))
@@ -141,8 +143,24 @@ r = random.uniform(1,100)
 h = random.uniform(1,100)
 
 # Calcul du volume du cône
-B=(math.pi * r**2)
+B = (math.pi * r**2)
 V = (1/3) * B * h
 
 # Affichage du volume du cône
 print(f"Le volume du cône est : {format(V, '0.2f')}")
+
+
+#--------------------------------------------------------------------------------
+print("\n# Exo 3")
+# Saisie de l'âge
+# age = float(input("Entrez votre âge : "))
+age= random.randint(1,36)
+# Contrôle de l'âge
+if age >= 18:
+    bMajeure = True
+    print(f"{age}:Vous êtes majeur.")
+else:
+    bMajeure = False
+    print(f"{age}:Vous êtes mineur.")
+
+print(f"Vous êtes majeur ? {bMajeure}")
