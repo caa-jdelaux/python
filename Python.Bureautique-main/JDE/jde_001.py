@@ -215,6 +215,8 @@ while count <= 5:
     
 #--------------------------------------------------------------------------------
 print("\n# Gestion des listes")
+print(dir(list))
+
 liste_vide = []
 ma_liste = ["B", "A", "C"]
 print("Liste vide:", liste_vide)
@@ -225,6 +227,7 @@ ma_liste.append(4)
 print("Ma liste:", ma_liste)
 ma_liste.append(4)
 print("Ma liste:", ma_liste)
+print("Nombre de 4:", ma_liste.count(4))
 ma_liste.remove(4)
 print("Ma liste:", ma_liste)
 ma_liste.extend([5, 6, 7])
@@ -239,6 +242,8 @@ while ma_liste:
 
 #--------------------------------------------------------------------------------
 print("\n# Gestion des sets")
+print(dir(set))
+
 mon_set = {1, 2, 3}
 print("Mon set:", mon_set)
 mon_set.update([5, 6, 7])
@@ -256,6 +261,8 @@ print("Mon set:", mon_set)
 
 #--------------------------------------------------------------------------------
 print("\n# le tuple")
+print(dir(tuple))
+
 mon_tuple = (1, 2, 3)
 print("Mon tuple:", mon_tuple)
 print("Mon tuple:", mon_tuple[0])
@@ -268,6 +275,8 @@ for i in mon_tuple:
 
 #--------------------------------------------------------------------------------
 print("\n# le dictionnaire")
+print(dir(dict))
+
 mon_dict = {"nom": "DUPUY", "prenom": "Jérémy", "age": 40}
 print("Mon dictionnaire:", mon_dict.values())
 print("Mon dictionnaire:", mon_dict.keys())
