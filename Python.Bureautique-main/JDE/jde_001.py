@@ -149,7 +149,22 @@ V = (1/3) * B * h
 # Affichage du volume du cône
 print(f"Le volume du cône est : {format(V, '0.2f')}")
 
+#--------------------------------------------------------------------------------
+print("\n# Gestion des conditions")
+random_boolean = bool(random.getrandbits(1))
+print("Random Boolean:", random_boolean)
+etat = "solide" if random_boolean else "liquide"
+print("Etat:", etat)
 
+print("\n# Boucle for")
+for i in range(1, 6):
+    print("Boucle for",i)
+
+print("\n# Boucle while")
+count = 1
+while count <= 5:
+    print("Boucle while",count)
+    count += 1
 #--------------------------------------------------------------------------------
 print("\n# Exo 3")
 # Saisie de l'âge
@@ -164,6 +179,7 @@ else:
     print(f"{age}:Vous êtes mineur.")
 
 print(f"Vous êtes majeur ? {bMajeure}")
+print("Vous êtes majeur ?", "Vrai" if age >= 18 else "Faux")
 
 #--------------------------------------------------------------------------------
 print("\n# Exo 3 bis")
@@ -182,8 +198,14 @@ match age:
 print(f"Vous êtes majeur ? {bMajeure}")
 
 #--------------------------------------------------------------------------------
-print("\n# Gestion des conditions")
-random_boolean = bool(random.getrandbits(1))
-print("Random Boolean:", random_boolean)
-etat = "solide" if random_boolean else "liquide"
-print("Etat:", etat)
+print("\n# Exo 4")
+# Génération d'une température aléatoire entre -100 et 150
+temperature = random.uniform(-100, 150)
+
+# Affichage du résultat en fonction de la température
+if temperature < 0:
+    print("T:", temperature, "Etat:","SOLIDE")
+elif temperature <= 100:
+    print("T:", temperature, "Etat:","LIQUIDE")
+else:
+    print("T:", temperature, "Etat:","GAZEUX")

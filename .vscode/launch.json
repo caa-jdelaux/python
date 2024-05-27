@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Execute jde_001.py",
+            "name": "Python: Lancer le programme",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/jde_001.py",
+            "program": "${file}",
             "console": "integratedTerminal"
         }
     ]
