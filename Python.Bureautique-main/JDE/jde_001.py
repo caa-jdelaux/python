@@ -204,8 +204,32 @@ temperature = random.randint(-100, 200)
 
 # Affichage du résultat en fonction de la température
 if temperature < 0:
-    print("T:", temperature, "Etat:","SOLIDE")
+    sEtat = "SOLIDE"
 elif temperature <= 100:
-    print("T:", temperature, "Etat:","LIQUIDE")
+    sEtat="LIQUIDE"
 else:
-    print("T:", temperature, "Etat:","GAZEUX")
+    sEtat ="GAZEUX"
+print("T:", temperature, "Etat:", sEtat)
+
+#--------------------------------------------------------------------------------
+print("\n# Gestion des listes")
+liste_vide = []
+ma_liste = [2, 1, 3]
+print("Liste vide:", liste_vide)
+print("Ma liste:", ma_liste)
+ma_liste.sort()
+print("Ma liste:", ma_liste)
+ma_liste.append(4)
+print("Ma liste:", ma_liste)
+ma_liste.remove(3)
+print("Ma liste:", ma_liste)
+ma_liste.extend([5, 6, 7])
+print("Ma liste:", ma_liste)
+ma_liste.pop()
+print("Ma liste:", ma_liste)
+ma_liste.reverse()
+print("Ma liste:", ma_liste)
+
+while ma_liste:
+    print(ma_liste.pop())
+    
