@@ -200,7 +200,7 @@ print(f"Vous êtes majeur ? {bMajeure}")
 #--------------------------------------------------------------------------------
 print("\n# Exo 4")
 # Génération d'une température aléatoire entre -100 et 150
-temperature = random.uniform(-100, 150)
+temperature = random.randint(-100, 200)
 
 # Affichage du résultat en fonction de la température
 if temperature < 0:
