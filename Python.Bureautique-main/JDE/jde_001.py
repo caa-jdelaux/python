@@ -223,6 +223,8 @@ ma_liste.sort()
 print("Ma liste:", ma_liste)
 ma_liste.append(4)
 print("Ma liste:", ma_liste)
+ma_liste.append(4)
+print("Ma liste:", ma_liste)
 ma_liste.remove(4)
 print("Ma liste:", ma_liste)
 ma_liste.extend([5, 6, 7])
@@ -234,7 +236,24 @@ print("Ma liste:", ma_liste)
 
 while ma_liste:
     print(ma_liste.pop())
-    
+
+#--------------------------------------------------------------------------------
+print("\n# Gestion des sets")
+mon_set = {1, 2, 3}
+print("Mon set:", mon_set)
+mon_set.update([5, 6, 7])
+print("Mon set:", mon_set)
+mon_set.add(4)
+print("Mon set:", mon_set)
+mon_set.add(4)
+print("Mon set:", mon_set)
+mon_set.remove(4)
+print("Mon set:", mon_set)
+
+mon_set.pop()
+print("Mon set:", mon_set)
+
+
 #--------------------------------------------------------------------------------
 print("\n# le tuple")
 mon_tuple = (1, 2, 3)
@@ -246,23 +265,52 @@ var1, var2, var3, var4, var5, var6 = mon_tuple
 print("var1:", var1)
 for i in mon_tuple:
     print(i)
-    
+
+#--------------------------------------------------------------------------------
+print("\n# le dictionnaire")
+mon_dict = {"nom": "DUPUY", "prenom": "Jérémy", "age": 40}
+print("Mon dictionnaire:", mon_dict.values())
+print("Mon dictionnaire:", mon_dict.keys())
+print("Mon dictionnaire:", mon_dict.items())
+
+for cle, valeur in mon_dict.items():
+    print(f"{cle} -> {valeur}")
+
+print("Mon dictionnaire:", mon_dict)
+print("Nom:", mon_dict["nom"])
+mon_dict["age"] = 41
+print("Mon dictionnaire:", mon_dict)
+mon_dict["ville"] = "Toulouse"
+print("Mon dictionnaire:", mon_dict)
+mon_dict.pop("ville")
+print("Mon dictionnaire:", mon_dict)
+mon_dict["ville"] = "Marseille"
+print("Mon dictionnaire:", mon_dict)
+mon_dict.popitem()
+print("Mon dictionnaire:", mon_dict)
+print("Ville:", mon_dict.get("ville", "Ville inconnue"))
+mon_dict["ville"] = "Paris"
+print("Mon dictionnaire:", mon_dict)
+print("Ville:", mon_dict.get("ville", "Ville inconnue"))
+mon_dict.clear()
+print("Mon dictionnaire:", mon_dict)
+
+
 #--------------------------------------------------------------------------------
 print("\n# Exo 5")
 # Exo 5
 # Affichage de la table de multiplication de 1 à 10
 nbPadding = 5
-n = 100 #random.randint(1, 10)
+n = 10 #random.randint(1, 10)
 print("n:", n)
 
 #Entete de la table
 for y in range(1, 11):
     print(f"{1*y:{nbPadding}}", end="")
 
+print()
 #Ligne de séparation
-print()
-print("-" * (nbPadding * 10), end="")
-print()
+print("-" * (nbPadding * 10))
 
 #Calcul de la table
 for x in range(1, n+1):
@@ -283,3 +331,35 @@ while epaisseurPaper < epaisseurCible:
 #nbPliage = math.ceil(math.log(epaisseurCible / epaisseurPaper, 2))
 print("Nombre de pliages nécessaires:", nbPliage)
 
+#--------------------------------------------------------------------------------
+print("\n# Exo 7")
+# Exo 7
+# Initialisation des variables
+population = 1000
+tauxCroissance = 0.02
+populationCible = 2000
+print("Population:", population)
+print("Taux de croissance:", tauxCroissance * 100, "%")
+print("Population à atteindre:", populationCible)
+annee = 0
+# Calcul de la population
+while population < populationCible:
+    population = population + (population * tauxCroissance)
+    annee += 1
+print(f"la population {population} est atteinte en {annee} ans")
+
+
+#--------------------------------------------------------------------------------
+print("\n# Exo 8")
+# Exo 8
+# Initialisation des variables
+nom = "Jeremy"
+prenom = "DUPUY"
+
+# fonction pour construire le nom complet
+def afficherNom(n, p):
+    res = f"Nom complet: {n} {p}"
+    return res
+
+# Affichage du nom complet
+print(afficherNom(nom, prenom))
