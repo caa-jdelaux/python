@@ -37,7 +37,7 @@ print("var_vide:", var_vide)
 print()
 print("#Manipulation des données")
 # Manipulation des données
-print("var_int:", var_int + 1)
+print("var_int + 1 :", var_int + 1)
 
 print()
 print("#Opérateurs booléens")
@@ -45,3 +45,29 @@ print("#Opérateurs booléens")
 print("Opé ET:", True and True)
 print("Opé OU:", True or False)
 print("Opé NEGATION:", not True)
+
+print()
+print("#Opérateurs relationnels")
+# Opérateurs relationnels
+print("opérateur sup:",4>3)
+print("opérateur inf:",4<3)
+print("opérateur égale:",4==3)
+print("opérateur sup:",4>3)
+print("opérateur non égale:",4 != 3)
+print("opérateur sup ou égale:",4>=3)
+print("opérateur inf ou égale:",4<=3)
+
+print()
+print("# récupération de valeurs")
+# récupération de valeurs
+print("#username = input('Enter your name: '")
+print("#print('Username:', username")
+
+
+print()
+print("# récupération du type de la variable")
+# récupération du type de la variable
+varInt = 1
+print("varInt:", varInt, " | Type of varInt:", type(varInt))
+varInt = "Test"
+print("varInt:", varInt, " | Type of varInt:", type(varInt))
