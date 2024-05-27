@@ -29,3 +29,5 @@ print("#Opérateurs booléens")
 print("Opé ET:",True and True)
 print("Opé OU:",True or False)
 print("Opé NEGATION:",not True)
+
+print("Hello")
