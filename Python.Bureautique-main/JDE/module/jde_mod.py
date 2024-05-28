@@ -1,4 +1,14 @@
-def dire_bonjour(n, p):
+import os
+#print(dir(os))
+
+def clear_terminal():
+    """Clears the terminal screen."""
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
+    
+
+
+def dire_bonjour(n : str, p: str):
     """Prints a greeting message with the provided name and surname.
 
     Args:
@@ -7,9 +17,8 @@ def dire_bonjour(n, p):
     """
     print(f"Bonjour {n.upper()} {p.capitalize()} !")
 
-PI_value = 3.141592653589793
-
 def get_pi():
+    PI_value = 3.141592653589793
     """Returns the value of PI with 2 decimal places."""
     return float(f"{PI_value:.2f}")
 
@@ -22,7 +31,6 @@ def ajouter(a: float, b: float) -> float:
     """
     return a + b
 
-
 def creer_tuple(a: int, b: int, c: int) -> tuple:
     """Creates a tuple with the provided values.
 
@@ -32,3 +40,16 @@ def creer_tuple(a: int, b: int, c: int) -> tuple:
         c (int): The third value to be included in the tuple.
     """
     return a, b, c
+
+
+def format_print(texte: str):
+    """Prints the provided text with a specific format.
+
+    Args:
+        texte (str): The text to be printed.
+    """
+    print("#--------------------------------------------------------------------------------")
+    # Gestion des modules
+    print("#", texte.upper()) 
+    print("#--------------------------------------------------------------------------------")
+    
