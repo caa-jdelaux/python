@@ -14,27 +14,35 @@ format_print("Exo Perso : Gestion des classes")
 print("Exo 11 : Traitement de données")
 exo11 = Notes()
 while True:
-    note = float(input("Saisissez une note entre 0 et 20 : "))
-    if note < 0 or note > 20:
-        # raise ValueError(f"La note doit être comprise entre 0 et 20. La note '{note}'n'a pas été ajoutée.")
-        print(f"La note '{note}'n'a pas été ajoutée.")
-        
-        print("\n\n")
-        
-        print("Traitements sur les notes")
-        if not exo11.notes:
-            print("Aucune note n'a été ajoutée.")
-            exit()
+    note_str = input("Saisissez une note entre 0 et 20 : ")
+    try:
+        note = float(note_str)
+        if note < 0 or note > 20:
+            # raise ValueError(f"La note doit être comprise entre 0 et 20. La note '{note}'n'a pas été ajoutée.")
+            print()
+            print(f"La note '{note}'n'a pas été ajoutée.")
+            
+            print("\n\n")
+            
+            print("Traitements sur les notes")
+            if not exo11.notes:
+                print("Aucune note n'a été ajoutée.")
+                exit()
+            else:
+                print("Voici les notes : \n", exo11.voir_notes())
+                # exo11.voir_notes()
+                print(f"la note maximale est de : {exo11.get_max():>8} / 20")
+                print(f"la note minimale est de : {exo11.get_min():>8} / 20")
+                print(f"La moyenne est de : {exo11.get_moyenne():>14} / 20")
+                exit()
         else:
-            print("Voici les notes : ")
-            exo11.voir_notes()
-            print("la note maximale est de : ", exo11.get_max())
-            print("la note minimale est de : ", exo11.get_min())
-            print("La moyenne est de : ", exo11.get_moyenne())
-            exit()
-    else:
-        # print(f"La note '{note}' a été ajoutée.", end="\n\n")
-        exo11.ajouter(note)
+            # print(f"La note '{note}' a été ajoutée.", end="\n\n")
+            exo11.ajouter(note)
+    except ValueError:
+        print("La note doit être un chiffre.")
+        continue
+    
+    
     
 
 

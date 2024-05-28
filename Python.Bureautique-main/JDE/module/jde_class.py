@@ -166,9 +166,12 @@ class Notes:
         """
         Affiche la liste des notes.
         """
+        tabNote = ""
         for note in self.notes:
-            print(note, end="\t")
-        print()
+            tabNote += "| " + str(note)
+            # print(note, end="\t")
+        return tabNote + "|"
+        # print()
 
 
 
