@@ -6,9 +6,14 @@
 # Trouver les packages à ajouter :
     https://pypi.org/
 
-
+# Trouver la syntaxe sur un fichier json
+    https://jsonpath.com/
+    
 # Documentation python :
     https://docs.python.org/3/
+
+# Entrainements
+    https://www.codingame.com/
 
 
 # Voir la liste des packages installé en local
@@ -23,3 +28,10 @@
         setuptools         65.5.0
         urllib3            2.2.1
 
+
+# Astuce CMD
+    https://www.malekal.com/astuces-invite-de-commande-a-connaitre/
+    Par exemple pour avoir malekal.com comme prompt, saisissez :
+    - prompt JDE$G
+    Modifier le titre du CMD
+    - title MON.TITRE
