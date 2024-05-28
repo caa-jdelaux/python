@@ -1,16 +1,17 @@
 
-Formations :
-    VSCode - utilisation
-    Avancé Python
+# Formations :
+    - VSCode - utilisation
+    - Avancé Python
 
-trouver les packages à ajouter :
+# Trouver les packages à ajouter :
     https://pypi.org/
 
-documentation python :
+
+# Documentation python :
     https://docs.python.org/3/
 
 
-Voir la liste des packages installé en local
+# Voir la liste des packages installé en local
     CMD> pip list
         Package            Version
         ------------------ --------
