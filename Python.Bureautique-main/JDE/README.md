@@ -101,4 +101,8 @@
 # Voir pytest pour les tests unitaires
     Exemple sous JDE/student
     https://datascientest.com/pytest-pourquoi-et-comment-lutiliser
-    
+
+
+
+# Sur les dataFrame du notebook, utilisation de plugin VSCODE
+    Data Wrangler
